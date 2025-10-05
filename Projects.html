@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head class="">
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    
+    
+
+    <title>Vite App</title>
+  </head>
+  <body class=" overflow-x-hidden bg-[#FFFFFF] dark:bg-black "> 
+    <div id="header"></div>
+    
+
+<main id="projects" class="w-screen h-full  overflow-hidden relative">
+  <!-- todo ** Hero Section -->
+    <section class="hero-services relative w-full pt-15 lg:pt-30  pb-10 lg:pb-35 lg:py-20 bg-[#caccce] dark:bg-[#0e0f11] overflow-hidden " id="hero-services">
+        <div class=" absolute h-[990px] w-[990px] rotate-[-45deg]  border border-[#38393b] rounded-full left-[-5%] top-[-35%] z[-15]" ></div>
+        <div class=" absolute h-[770px] w-[770px] rotate-[-45deg]  border border-[#38393b] rounded-full right-[-5%] top-[-120%] z[-15]" ></div>
+
+        <div class="w-full ms:w-[90%] lg:w-[70%] mx-auto px-3.5 pt-5  lg:pt-25">
+            <div class="flex flex-col lg:flex-row justify-between  gap-2.5">
+                <div class="">
+
+                    <div class="  mb-1lg:mb-5   title ">
+                        <h1 class="text-[40px] lg:text-[80px] font-bold text-[#24292F] dark:text-[#F0F6FC]">
+                           
+                                     <span>P</span><span>R</span><span>O</span><span>J</span><span>E</span><span>C</span><span>T</span><span>S</span>
+                        </h1>
+                    </div>
+                    <div class="flex flex-col lg:flex-row  "> 
+                    <div class="flex items-center gap-3 basis-[60%]">
+                        <div class="img-rotat2 ">
+                            <img src="assets/img/star1.png" alt="">
+                        </div>
+                        <div >
+                            <p class="text-[#656D76] dark:text-[#9e9fa0] cursor-pointer text-[16px] lg:text-[16px] font-semibold">
+                                Agenko empowers businesses with innovative strategies & creative agency solutions
+                            </p>
+                        </div>
+                    </div>
+                    <div class="basis-[40%] flex flex-col items-end justify-center">
+                        <ul class="flex  justify-evenly gap-3 bg-[#e5e7eb] p-3 dark:bg-[#18191b]  rounded-full border border-[#dddd] w-[60%] " >
+                            <li><a href="index.html" class="text-[#656D76] dark:text-[#9e9fa0]">Home</a></li>
+                            <li><a href="about-us.html" class="text-black dark:text-[#95f14c]">project</a></li>
+                        </ul>
+                       
+                        
+                        </div>
+                    </div>
+                </div>
+                <div class="img-rotat2">
+                <img src="assets/img/circle-shape1.png" alt="" >
+            </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+<!-- !! end Hero Section -->
+
+<section class="w-full px-3.5 py-10 lg:py-25  lg:px-10">
+  <div class="flex flex-col lg:flex-row gap-12">
+    <!-- todo ing-gallery-1 -->
+ <div class="flex flex-col basis-[50%] gap-5" data-aos="fade-right">
+  <!-- صورة واحدة -->
+  <div class="overflow-hidden group cursor-pointer relative">
+    <img 
+      src="assets/img/project1.jpg" 
+      alt=""
+      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+    >
+    <!-- Overlay يظهر عند الـ hover -->
+    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+      <div class="text-white text-center px-4">
+        <span class="inline-block border-2 border-white rounded-full px-6 py-2 text-sm mb-4">Web Design</span>
+        <h3 class="text-2xl lg:text-3xl font-bold">Creative Javanese a Lead Designer & Mobile</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- صورتين جنب بعض -->
+  <div class="flex flex-col lg:flex-row gap-4">
+    <div class="overflow-hidden group cursor-pointer relative">
+      <img 
+        src="assets/img/project2.jpg" 
+        alt=""
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      >
+      <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+        <div class="text-white text-center px-4">
+          <span class="inline-block border-2 border-white rounded-full px-6 py-2 text-sm mb-4">Web Design</span>
+          <h3 class="text-xl lg:text-2xl font-bold">Creative Javanese a Lead Designer & Mobile</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="overflow-hidden group cursor-pointer relative">
+      <img 
+        src="assets/img/project3.jpg" 
+        alt=""
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      >
+      <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+        <div class="text-white text-center px-4">
+          <span class="inline-block border-2 border-white rounded-full px-6 py-2 text-sm mb-4">Web Design</span>
+          <h3 class="text-xl lg:text-2xl font-bold">Creative Javanese a Lead Designer & Mobile</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- صورة واحدة -->
+  <div class="overflow-hidden group cursor-pointer relative">
+    <img 
+      src="assets/img/project4.jpg" 
+      alt=""
+      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+    >
+    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+      <div class="text-white text-center px-4">
+        <span class="inline-block border-2 border-white rounded-full px-6 py-2 text-sm mb-4">Web Design</span>
+        <h3 class="text-2xl lg:text-3xl font-bold">Creative Javanese a Lead Designer & Mobile</h3>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- todo ing-gallery-2 -->
+      <div class="flex flex-col basis-[50%] gap-5" data-aos="fade-left">
+
+
+          <!-- صورتين جنب بعض -->
+  <div class="flex flex-col lg:flex-row gap-4">
+    <div class="overflow-hidden group cursor-pointer relative">
+      <img 
+        src="assets/img/project5.jpg" 
+        alt=""
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      >
+      <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+        <div class="text-white text-center px-4">
+          <span class="inline-block border-2 border-white rounded-full px-6 py-2 text-sm mb-4">Web Design</span>
+          <h3 class="text-xl lg:text-2xl font-bold">Creative Javanese a Lead Designer & Mobile</h3>
+        </div>
+      </div>
+    </div>
+    
+    <div class="overflow-hidden group cursor-pointer relative">
+      <img 
+        src="assets/img/project6.jpg" 
+        alt=""
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      >
+      <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+        <div class="text-white text-center px-4">
+          <span class="inline-block border-2 border-white rounded-full px-6 py-2 text-sm mb-4">Web Design</span>
+          <h3 class="text-xl lg:text-2xl font-bold">Creative Javanese a Lead Designer & Mobile</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- صورة واحدة -->
+  <div class="overflow-hidden group cursor-pointer relative">
+    <img 
+      src="assets/img/project7.jpg" 
+      alt=""
+      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+    >
+    <!-- Overlay يظهر عند الـ hover -->
+    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+      <div class="text-white text-center px-4">
+        <span class="inline-block border-2 border-white rounded-full px-6 py-2 text-sm mb-4">Web Design</span>
+        <h3 class="text-2xl lg:text-3xl font-bold">Creative Javanese a Lead Designer & Mobile</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- صورتين جنب بعض -->
+
+
+  <!-- صورة واحدة -->
+  <div class="overflow-hidden group cursor-pointer relative">
+    <img 
+      src="assets/img/project8.jpg" 
+      alt=""
+      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+    >
+    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+      <div class="text-white text-center px-4">
+        <span class="inline-block border-2 border-white rounded-full px-6 py-2 text-sm mb-4">Web Design</span>
+        <h3 class="text-2xl lg:text-3xl font-bold">Creative Javanese a Lead Designer & Mobile</h3>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+
+</main>
+
+
+    
+    
+
+
+
+    <div id="footer"></div>
+<script src="src/loader.js"></script>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>

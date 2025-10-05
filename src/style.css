@@ -1,0 +1,807 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+/* ** header logo */
+.button {
+  position: relative;
+  border: none;
+  background: transparent;
+--stroke-color: #4c6e32;
+    --ani-color: rgba(95, 3, 244, 0);
+    --color-gar: linear-gradient(90deg, #4d7033, #4f7334, #6c657a, #686377);
+  letter-spacing: 3px;
+  font-size: 2em;
+  font-family: "Arial";
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--stroke-color);
+  cursor: pointer;
+}
+
+.front-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  background: var(--color-gar);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 200%;
+  overflow: hidden;
+  transition: all 1s;
+  animation: 8s ani infinite;
+  border-bottom: 2px solid transparent;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.button:hover .front-text {
+  width: 100%;
+  border-bottom: 2px solid #03a9f4;
+  -webkit-text-stroke: 1px var(--ani-color);
+ 
+}
+
+@keyframes ani {
+  0% {
+    background-position: 0%;
+  }
+
+  50% {
+    background-position: 400%;
+  }
+
+  100% {
+    background-position: 0%;
+  }
+}
+
+/* From Uiverse.io by juanpabl0svn */
+
+/* From Uiverse.io by gharsh11032000 */ 
+.button-2 {
+  position: relative;
+  background-color: #9cfe4f;
+  color: black;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 10px;
+  width: 150px;
+  height: 60px;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(51, 51, 51, 0.2);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button-2::before {
+  content: "learn more";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-color: CC#763434;
+  transform: translate(0%,90%);
+  z-index: 99;
+  position: relative;
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button-2::after {
+  content: "learn more";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9cfe4f;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transform-origin: top;
+  transform: translate(0%,-100%);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button-2:hover::before {
+  transform: translate(0%,0%);
+}
+
+.button-2:hover::after {
+  transform: translate(0%,-200%);
+}
+
+.button-2:focus {
+  outline: none;
+}
+
+.button-2:active {
+  scale: 0.95;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+  cursor: pointer;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  --background: #20262c;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background);
+  transition: 0.5s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 15%;
+  box-shadow: inset 8px -4px 0px 0px #ececd9, -4px 1px 4px 0px #dadada;
+  background: var(--background);
+  transition: 0.5s;
+}
+
+.decoration {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 2px;
+  border-radius: 50%;
+  right: 20%;
+  top: 15%;
+  background: #e5f041e6;
+  backdrop-filter: blur(10px);
+  transition: all 0.5s;
+  box-shadow: -7px 10px 0 #e5f041e6, 8px 15px 0 #e5f041e6, -17px 1px 0 #e5f041e6,
+    -20px 10px 0 #e5f041e6, -7px 23px 0 #e5f041e6, -15px 25px 0 #e5f041e6;
+}
+
+input:checked ~ .decoration {
+  transform: translateX(-20px);
+  width: 10px;
+  height: 10px;
+  background: white;
+  box-shadow: -12px 0 0 white, -6px 0 0 1.6px white, 5px 15px 0 1px white,
+    1px 17px 0 white, 10px 17px 0 white;
+}
+
+input:checked + .slider {
+  background-color: #5494de;
+}
+
+input:checked + .slider:before {
+  transform: translateX(100%);
+  box-shadow: inset 15px -4px 0px 15px #efdf2b, 0 0 10px 0px #efdf2b;
+}
+
+/* From Uiverse.io by vinodjangid07 */
+.toggle {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition-duration: 0.5s;
+}
+
+.bars {
+  width: 100%;
+  height: 4px;
+  background-color: rgb(176, 92, 255);
+  border-radius: 4px;
+}
+
+#bar2 {
+  transition-duration: 0.8s;
+}
+
+#bar1,
+#bar3 {
+  width: 70%;
+}
+
+#checkbox:checked + .toggle .bars {
+  position: absolute;
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar2 {
+  transform: scaleX(0);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar1 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar3 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle {
+  transition-duration: 0.5s;
+  transform: rotate(180deg);
+}
+
+/* From Uiverse.io by vinodjangid07 */
+#checkbox {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition-duration: 0.5s;
+}
+
+.bars {
+  width: 100%;
+  height: 4px;
+  background-color: rgb(176, 92, 255);
+  border-radius: 4px;
+}
+
+#bar2 {
+  transition-duration: 0.8s;
+}
+
+#bar1,
+#bar3 {
+  width: 70%;
+}
+
+#checkbox:checked + .toggle .bars {
+  position: absolute;
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar2 {
+  transform: scaleX(0);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar1 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar3 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle {
+  transition-duration: 0.5s;
+  transform: rotate(180deg);
+}
+@media (min-width: 992px) {
+  .toggle {
+    display: none !important;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .main-menu ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .main-menu li .absolute {
+    position: static;
+    transform: none;
+    margin-top: 0.5rem;
+    opacity: 1;
+    visibility: visible;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .main-menu li:hover .absolute {
+    max-height: 200px;
+  }
+
+  .button {
+    position: relative;
+    border: none;
+    background: transparent;
+    --stroke-color: #000;
+    --ani-color: rgba(95, 3, 244, 0);
+    --color-gar: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    letter-spacing: 3px;
+    font-size: 1.5rem;
+    font-family: "Arial";
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--stroke-color);
+    cursor: pointer;
+  }
+}
+
+/* ** header logo */
+/* إخفاء السهم الافتراضي */
+.main-summary::-webkit-details-marker {
+  display: none;
+}
+
+.sub-summary::-webkit-details-marker {
+  display: none;
+}
+
+/* السهم للعناصر الرئيسية فقط */
+
+/* تدوير السهم عند الفتح للعناصر الرئيسية */
+.main-details[open] .main-summary::after {
+  transform: translateY(-50%) rotate(180deg);
+  color: #9cfe4f;
+}
+
+/* تغيير لون النص والسهم عند الفتح للعناصر الرئيسية */
+.main-details[open] > .main-summary {
+  color: #9cfe4f !important;
+  background-color: #18191b;
+}
+
+.main-details[open] > .main-summary span {
+  color: #9cfe4f !important;
+}
+
+.main-details[open] > .main-summary a {
+  color: #9cfe4f !important;
+}
+
+/* العناصر الفرعية - بدون سهم وبدون تلوين تلقائي */
+.sub-details[open] > .sub-summary {
+  color: #9cfe4f !important;
+}
+
+.sub-details[open] > .sub-summary a {
+  color: #9cfe4f !important;
+}
+
+.sub-details[open] > .sub-summary span {
+  color: #9cfe4f !important;
+}
+
+
+
+/* ** mobile-menu */
+
+#mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  transition: left 0.5s ease; /* هذه الإضافة تجعل الانتقال ناعم */
+}
+
+
+.show-color {
+  width: 261px;
+    height: 261px;
+    background-color: rgba(155, 254, 79, 0.5);
+    -webkit-filter: blur(80px);
+    filter: blur(80px);
+}
+
+.show-color2{
+      width: 261px;
+    height: 261px;
+    background-color: rgba(202, 186, 231, 0.6);
+    -webkit-filter: blur(80px);
+    filter: blur(80px);
+}
+.button {
+  position: relative;
+  border: none;
+  background: transparent;
+--stroke-color: #4c6e32;
+    --ani-color: rgba(95, 3, 244, 0);
+    --color-gar: linear-gradient(90deg, #4d7033, #4f7334, #6c657a, #686377);
+  letter-spacing: 3px;
+  font-size: 2em;
+  font-family: "Arial";
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--stroke-color);
+  cursor: pointer;
+}
+
+
+/* todo header */
+.header-shdow{
+      width: 660px;
+    height: 660px;
+    border-radius: 50%;
+    background: #8778F5;
+    -webkit-filter: blur(150px);
+    filter: blur(150px);
+    top: -250px;
+    right: -350px;
+    position: absolute;
+    z-index: 4;
+}
+.header-shdow2{
+      width: 760px;
+    height: 760px;
+    border-radius: 50%;
+    background: rgba(156, 254, 79, 0.6);
+    -webkit-filter: blur(200px);
+    filter: blur(200px);
+         top: -350px;
+    left: -350px;
+    position: absolute;
+    z-index: 4;
+    
+}
+
+
+#readmore#arrow{
+  transition: all 0.5s ease-in-out;
+}
+#readmore:hover #arrow{
+  transition: all 0.5s ease-in-out;
+}
+
+
+/* From Uiverse.io by KINGFRESS */ 
+
+
+
+/* From Uiverse.io by vinodjangid07 */ 
+.button-4 {
+  width: 110px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  background-color: rgb(161, 255, 20);
+  border-radius: 30px;
+  color: rgb(19, 19, 19);
+  font-weight: 600;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  transition-duration: .2s;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+  padding-left: 8px;
+  transition-duration: .5s;
+}
+
+.svgIcon {
+  height: 25px;
+  transition-duration: 1.5s;
+}
+
+.bell path {
+  fill: rgb(19, 19, 19);
+}
+
+.button-4:hover {
+  background-color: rgb(192, 255, 20);
+  transition-duration: .5s;
+}
+
+.button-4:active {
+  transform: scale(0.97);
+  transition-duration: .2s;
+}
+
+.button-4:hover .svgIcon {
+  transform: rotate(250deg);
+  transition-duration: 1.5s;
+}
+
+
+.mb-10.bt {
+    position:relative;
+}
+
+.mb-10.bt::before{
+    content:'';
+    width:1px;
+    height:100px;
+    position:absolute;
+    background-color:#e6e6e6;
+    left:50%;
+    z-index:-1;
+
+}
+
+
+[ data-text="Testimonial"]{
+  -webkit-text-stroke: 3px rgb(2, 0, 0);
+}
+
+@media(max-width:992px){
+  .header-shdow{
+            width: 300px;
+        height: 300px;
+        -webkit-filter: blur(70px);
+        filter: blur(70px);
+  }
+  .header-shdow2{
+    width: 360px;
+        height: 360px;
+        -webkit-filter: blur(100px);
+        filter: blur(100px);
+  }
+  .button-2 {
+    position: relative;
+    background-color: #9cfe4f;
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    width: 112px;
+    height: 46px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(51, 51, 51, 0.2);
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+}
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+ 
+/*** services */
+
+#services .iteam{
+  position: relative;
+}
+
+#services .iteam::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+background-color: #9cfe4f;
+
+}
+
+@media(max-width:992px){
+  #services .iteam::before{
+    display: none;
+  }
+}
+
+    .mySwiper-2 {
+      width: 100%;
+      height: 100%;
+    }
+
+    .mySwiper-2 .swiper-slide {
+      text-align: center;
+  
+    }
+
+#form-1 input{
+  background-color: #1a1b1d;
+  padding: 15px 30px;
+  font-weight: 800;
+  font-size: 20px;
+  border: 1px solid #ffffff26;
+  border-radius:12px ;
+  color: #fff;
+}
+#form-1 input::placeholder{
+  color: #ffff;
+}
+
+#form-1 textarea{
+  background-color: #1a1b1d;
+  padding: 15px 30px;
+  font-weight: 800;
+  font-size: 20px;
+  border: 1px solid #ffffff26;
+  border-radius:12px ;
+  color: #fff;
+}
+#form-1 textarea::placeholder{
+  color: #ffff;
+}
+
+
+/* loader */
+
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #7e7e7edd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+
+        .page-loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-content {
+            text-align: center;
+        }
+
+        /* اسم الصفحة */
+        .page-name {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: rgb(0, 0, 0);
+            margin-bottom: 2.5rem;
+            letter-spacing: 1px;
+            animation: fadeIn 0.8s ease;
+            text-transform: uppercase;
+          font-weight: bolder;
+          font-style: italic;
+        }
+
+        /* دوائر متحركة */
+        .loader-circles {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .circle {
+            width: 16px;
+            height: 16px;
+            background: white;
+            border-radius: 50%;
+            animation: bounce 1.2s infinite ease-in-out;
+        }
+
+        .circle:nth-child(1) {
+            animation-delay: -0.24s;
+        }
+
+        .circle:nth-child(2) {
+            animation-delay: -0.12s;
+        }
+
+        .circle:nth-child(3) {
+            animation-delay: 0s;
+        }
+
+        /* الأنيميشنات */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 80%, 100% {
+                transform: scale(0);
+                opacity: 0.3;
+            }
+            40% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+        }
+
+        /* محتوى الصفحة */
+        .page-content {
+            padding: 3rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .content-box {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+
+
+        .demo-btn {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 5px;
+        }
+
+        .demo-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+        }
